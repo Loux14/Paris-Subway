@@ -1,0 +1,36 @@
+Class MetroParis 
+    Sert uniquement comme Main 
+    Va lire l'integralite de Metro.txt pour y prendre et disperser les infos dans les autres classe
+    Va faire appelle aux 3 fonctions du TD a but d'exemple de fonctionnalité
+    J'ai choisis d'implémenter mes classes en 'sacrifiant' la memoire utilisée, car l'impact sera petit
+     car les données ne sont pas ultra nombreuses
+    En contre-partis, la plupart des actions faites par mes fonctions avec les données seront en O(1):
+    -trouver une station d'apres son nom
+    -lister ses edges en O(e) qui sont pas plus nombreux que 3-4;
+    -trouver ses stations associées grace a leur numero.
+    etc...
+
+Class Graph
+    Contient la List<> des stations et des edges
+    Aussi, il y a 2 HashMap pour trouver une Station en possedant son nom ou son numéro en 0(1)
+
+
+Class Station
+    Chaque station possede 2 ArrayList pour stocker les Edges partant ou arrivant de celle-ci 
+    Cela facilite le travail des Algo de trajet
+
+Class Edge 
+    Ne possede que des Int de stations d'arrivee et de depart, puisque 
+    les stations y étant associées peuvent etre trouvées en O(1) dans le graph
+    Le but est d'optimiser la lisibilité de cette classe
+
+Class trajet
+    Elle n'a pas été modifiée a part les getter et setter habituels
+
+
+stationCritiques()
+En O(n*e) du nombre de station (assez rapide car peu de données), je verifie simplement pour chaque 
+station si elle a qu"une seule connection entrante. 
+Alors la stations associée est forcement considerée critique.
+
+
