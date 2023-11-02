@@ -1,4 +1,3 @@
-package TP3;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -27,7 +26,7 @@ public class metroParis {
 		try {
 			Stack<String> stack = new Stack<String>();
 			Graph graph = new Graph();
-			File myObj = new File("./src/metro.txt");
+			File myObj = new File("Metro.txt");
 			Scanner myReader = new Scanner(myObj);
 
 
